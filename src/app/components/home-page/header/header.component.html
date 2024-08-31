@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg main-header__header-container"> 
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item main-header__header-nav">
+                <a class="nav-link active" aria-current="page" href="#">Starter</a>
+              </li>
+              <li class="nav-item nav-item main-header__header-nav">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <div class="dropdown-container " (click)="toggleCreateDropdown($event)" >
+                <div class="dropdown-header nav-link dropdown-toggle">
+                  <!-- {{ selectedOption || 'Create New' }} -->
+                  Create New
+                </div>
+                <ul class="dropdown-options" [class.show]="isDropdownCreateOpen">
+                  <li *ngFor="let create of creats let i = index"   
+                  [ngClass]="{'underline': i >= 1}" (click)="selectcreate(create)">
+                    {{ create }}
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+      </div>
+      <div class="dropdown-container " (click)="toggleDropdown($event)" >
+        <div class="dropdown-header nav-link dropdown-toggle">
+          <!-- {{ selectedOption || 'Steve Jobs' }} -->
+          <img src="assets/img_avatar.png" alt="Avatar" class="main-header__avatar">
+          Steve Jobs
+        </div>
+        <ul class="dropdown-options" [class.show]="isDropdownOpen">
+          <li *ngFor="let option of options let i = index"   
+          [ngClass]="{'underline': i >= 2}" (click)="selectOption(option)">
+          <span [routerLink]="getRouterLink(option)">
+            {{ option }}
+          </span>
+          </li>
+         
+        </ul>
+      </div>
+      
+ 
+  </nav>

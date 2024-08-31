@@ -1,0 +1,50 @@
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slot{
+    // padding-left: 34px;
+    img{
+        width: 20px;
+        margin-right: 3px;
+        height: 20px;
+    }
+  }
+  .headingTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  .AddItem{
+    width: 30px;
+   
+        height: 30px;
+  }
+  .headerNewItem{
+    position: relative;
+  }
+  .closeBtn{
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 1%;
+    top: 16%;
+    cursor: pointer;
+    width: 35px;
+    // .cross{
+    //   width: 35px;
+    //   height: 35px;
+    // }
+  }
+  .title{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: .009375em;
+    margin: 0 0 16px;
+  }
+  .inputFormGroup{
+    margin-bottom: 14px;
+  }

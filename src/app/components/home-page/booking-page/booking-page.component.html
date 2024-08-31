@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <!-- <span class="col-12 main-dasboard__Dashboard">detail about sales ratio</span>     -->
+            <div class="table-container bg-white rounded shadow p-4 mt-5">
+                <h2 class="mb-3">Booking</h2>
+                
+           
+                <div class="table-responsive">
+                  <table class="table  align-middle">
+                    
+                    <thead>
+                      <tr >
+                        <th scope="col ">Name</th>
+                        <!-- <th scope="col ">Email</th> -->
+                        <th scope="col">Bookings</th>
+                        <th scope="col">Price </th>
+                        <th scope="col">Details</th>
+                      </tr>
+                      
+                      
+                    </thead>
+                    
+                    <tbody>
+                      <tr *ngFor="let Booking of Bookings" >
+                        <td class="avatar d-flex align-items-center">
+                          <!-- <img [src]="Booking.avatar" alt="Hanna Gover" class="rounded-circle me-2" width="40" height="40"> -->
+                          <div>
+                            <div>{{ Booking.name }}</div>
+                            <small class="text-muted">{{ Booking.email }}</small>
+                          </div>
+                        </td>
+                        <!-- <td>{{ Booking.name }}</td>
+                        <td>{{ Booking.email }}</td> -->
+                        <td> {{Booking.slots}} 
+                            <!-- <img [src]="Booking.slots" alt="Hanna Gover"  width="25" height="25"> assets/tickets-ticket-svgrepo-com.svg -->
+                        </td>
+                        <td>{{ Booking.price }}</td>
+                        <td>
+                            
+                            <img [src]="Booking.details" alt="Hanna Gover"  width="25" height="25">
+                        </td>
+                       
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+    </div>
+</div>

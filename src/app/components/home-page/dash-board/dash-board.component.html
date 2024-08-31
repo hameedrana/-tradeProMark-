@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 main-dasboard__mainDashboard">
+      <div class=" main-dasboard__Dashboard">
+        <span class="main-dasboard__summary">$21K</span>
+        <p class="main-dasboard__summaryAbout">Yearly Earning</p>
+      </div>
+      <div class=" main-dasboard__Dashboard">
+        <span class="main-dasboard__summary">$1K</span>
+        <p class="main-dasboard__summaryAbout">Refund given</p>
+      </div>
+      <div class=" main-dasboard__Dashboard">
+        <span class="main-dasboard__summary">456</span>
+        <p class="main-dasboard__summaryAbout">Yearly Project</p>
+      </div>
+      <div class="main-dasboard__Dashboard">
+        <span class="main-dasboard__summary">210</span>
+        <p class="main-dasboard__summaryAbout">Weekly Sales</p>
+      </div>
+    </div>
+    <div class="col-12 main-dasboard__saleRatio">
+      <div class="col-7 main-dasboard__saleRatioSummary">
+        <div class="col-12">
+            <span class="main-dasboard__saleRatioTitle">Sales Ratio</span>
+            <p class="main-dasboard__saleRatioAbout">Yearly Sales Report</p>
+        </div>
+        <div class="col-12">
+            <div>
+                <canvas baseChart
+                  [data]="lineChartData"
+                  [options]="lineChartOptions"
+                  [type]="lineChartType">
+                </canvas>
+              </div>
+        </div>
+      </div>
+      <div class="col-5 main-dasboard__saleRatioFeed">
+        <div class="col-12">
+            <span class="main-dasboard__saleRatioTitle">Feeds</span>
+            <p class="main-dasboard__saleRatioAbout">Widget you can use</p>
+        </div>
+        <div class="col-12">
+            <div class="main-dasboard__saleRatioFeedItem">
+                <img src="assets/images/feed1.png" alt="img">
+                <span>You have 4 pending tasks.</span>
+            </div>
+            <div class="main-dasboard__saleRatioFeedItem">
+                <img src="assets/images/feed2.png" alt="img" >
+                <span>Server #1 overloaded</span>
+            </div>
+            <div class="main-dasboard__saleRatioFeedItem">
+                <img src="assets/images/feed3.png" alt="img">
+                <span>New order received.</span>
+            </div>
+            <div class="main-dasboard__saleRatioFeedItem">
+                <img src="assets/images/feed4.png" alt="img">
+                <span>You have new password.</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 ">
+    <!-- <span class="col-12 main-dasboard__Dashboard">detail about sales ratio</span>     -->
+    <div class="table-container bg-white rounded shadow p-4 mt-5">
+        <h2 class="mb-3">Top Selling</h2>
+        <p>Overview of the projects</p>
+   
+        <div class="table-responsive">
+          <table class="table  align-middle">
+            
+            <thead>
+              <tr >
+                <th scope="col ">Team Lead</th>
+                <th scope="col">Project</th>
+                <th scope="col">Status</th>
+                <th scope="col">Weeks</th>
+                <th scope="col">Budget</th>
+              </tr>
+              
+            </thead>
+            
+            <tbody>
+              <tr *ngFor="let project of projects" >
+                <td class="avatar d-flex align-items-center">
+                  <img [src]="project.avatar" alt="Hanna Gover" class="rounded-circle me-2" width="40" height="40">
+                  <div>
+                    <div>{{ project.name }}</div>
+                    <small class="text-muted">{{ project.email }}</small>
+                  </div>
+                </td>
+                <td>{{ project.project }}</td>
+                <td><span class="status rounded-circle d-inline-block" [ngClass]="project.status"></span></td>
+                <td>{{ project.weeks }}</td>
+                <td>{{ project.budget }}</td>
+               
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 main-dasboard__mainDashboard">
+      <div class="col-3 main-dasboard__Dashboard">1</div>
+      <div class="col-3 main-dasboard__Dashboard">2</div>
+      <div class="col-3 main-dasboard__Dashboard">3</div>
+      <div class="col-3 main-dasboard__Dashboard">4</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            
+            <div class="table-container bg-white rounded shadow p-4 mt-5">
+                <h2 class="mb-3">Transaction</h2>
+                
+           
+                <div class="table-responsive">
+                  <table class="table  align-middle">
+                    
+                    <thead>
+                      <tr >
+                        <th scope="col ">Name</th>
+                        <th scope="col ">Amount</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Booking no</th>
+                        <th scope="col">Booking  </th>
+                      
+                      </tr>
+                      
+                      
+                    </thead>
+                    
+                    <tbody>
+                      <tr *ngFor="let transaction of transactions" >
+                      
+                        <td>{{ transaction.name }}</td>
+                        <td>{{ transaction.Amount }}</td>
+                        <!-- <td class="slot"> 
+                            <img [src]="transaction.slots" alt="Hanna Gover" > 
+                        </td> -->
+                        <td>{{ transaction.date }}</td>
+                        <td class="slot">{{transaction.BookingNo}}</td>
+                        <td class="slot">
+                            
+                            <img [src]="transaction.Booking" alt="Hanna Gover"  >
+                        </td>
+                       
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+    </div>
+</div>

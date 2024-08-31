@@ -1,0 +1,64 @@
+.main-dasboard {
+  &__mainDashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+  &__Dashboard {
+    background: white;
+    width: 200px;
+    padding: 12px;
+    border-radius: 9px;
+  }
+  &__summary {
+    color: black;
+    padding-left: 23%;
+  }
+  &__summaryAbout {
+    color: #686767;
+    padding-left: 23%;
+  }
+  &__saleRatio {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__saleRatioSummary {
+    background: white;
+    padding: 12px;
+    border-radius: 9px;
+  }
+  &__saleRatioFeed {
+    background: white;
+    padding: 12px;
+    border-radius: 9px;
+    margin-left: 12px;
+  }
+  &__saleRatioTitle{
+     color: black;
+    font-size: 20px; 
+}
+&__saleRatioAbout{
+     color: #686767;
+     
+}
+&__saleRatioFeedItem{
+    padding: 10px 0px;
+    img{
+        margin-right: 1rem;
+    }
+}
+&__tableData{
+    padding: 10px 0px;
+}
+}
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status {
+    width: 15px;
+    height: 15px;
+  }

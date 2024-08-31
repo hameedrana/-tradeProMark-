@@ -1,0 +1,17 @@
+.main-alerts {
+  &__alertContainer {
+    background: white;
+    padding: 23px;
+    border-radius: 9px;
+    width: 95%;
+    margin: 2rem 0rem 0rem 2rem;
+  }
+  &__alerttitle {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+.alert-outline {
+    background-color: transparent;
+    border-radius: 4px;
+}

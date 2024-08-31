@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            
+            <div class="table-container bg-white rounded shadow p-4 mt-5">
+                <h2 class="mb-3">Customers booking details</h2>
+                
+           
+                <div class="table-responsive">
+                  <table class="table  align-middle">
+                    
+                    <thead>
+                      <tr >
+                        <th scope="col ">Name</th>
+                        <th scope="col ">Email</th>
+                        <th scope="col">Bookings</th>
+                        <th scope="col">Transactions  </th>
+                      
+                      </tr>
+                      
+                      
+                    </thead>
+                    
+                    <tbody>
+                      <tr *ngFor="let Booking of Bookings" >
+                      
+                        <td>{{ Booking.name }}</td>
+                        <td>{{ Booking.email }}</td>
+                        <td class="slot"> 
+                            <img [src]="Booking.slots" alt="Hanna Gover" > 
+                        </td>
+                        <!-- <td>{{ Booking.price }}</td> -->
+                        <td class="slot">
+                            
+                            <img [src]="Booking.details" alt="Hanna Gover"  >
+                        </td>
+                       
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+    </div>
+</div>

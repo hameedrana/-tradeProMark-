@@ -1,0 +1,144 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <!-- <span class="newItem">Add New Items</span> -->
+
+      <div class="table-container bg-white rounded shadow p-4 mt-5">
+        <div class="headingTitle">
+          <h2 class="mb-3">Sub Items</h2>
+          <img
+            [src]="AddItmePlus"
+            alt="Add new item"
+            (click)="openModal()"
+            class="AddItem"
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th scope="col ">Name</th>
+                <th scope="col ">Price</th>
+                <th scope="col ">Items</th>
+                <th scope="col" style="visibility: hidden">Sub-items</th>
+                <!-- <th scope="col">Transactions  </th> -->
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let item of subItems">
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.subItem }}</td>
+                <td class="slot">
+                  <!-- <img [src]="item.viewItem" alt="Hanna Gover" /> -->
+                  <img [src]="item.editItem" alt="Hanna Gover" />
+                  <img [src]="item.deleteItem" alt="Hanna Gover" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- add new sub item -->
+
+  <!-- <div class="table-container bg-white rounded shadow p-4 mt-5">
+  <table class="table mt-4">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Price</th>
+       <th>Item</th>   
+       <th>Is available</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let item of items">
+       <td>{{ item.name }}</td>
+       <td>{{ item.price }}</td>
+       <td>{{ item.itemName }}</td>
+       <td>{{ item.isAvailable ? 'Yes' : 'No' }}</td>
+     </tr>
+   </tbody>
+ </table>
+  </div> -->
+</div>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngClass]="{ show: showModal }"
+  style="display: {{ showModal ? 'block' : 'none' }}"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header headerNewItem">
+        <h3 class="title">Add New Item</h3>
+        <img
+          src="assets/close-sm-svgrepo-com.svg"
+          alt=""
+          class="close closeBtn"
+          (click)="closeModal()"
+          aria-label="Close"
+        />
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group inputFormGroup">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              [(ngModel)]="formData.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group inputFormGroup">
+            <label for="price">price</label>
+            <input
+              type="text"
+              id="price"
+              class="form-control"
+              [(ngModel)]="formData.price"
+              name="price"
+              required
+            />
+          </div>
+          <div class="form-group inputFormGroup">
+            <label for="itemName">Item</label>
+            <select
+              id="itemName"
+              class="form-control"
+              [(ngModel)]="formData.itemName"
+              name="itemName"
+              required
+            >
+              <option value="" disabled>Select Item</option>
+              <option *ngFor="let item of availableItems" [value]="item">
+                {{ item }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group form-check inputFormGroup">
+            <input
+              type="checkbox"
+              id="isAvailable"
+              class="form-check-input"
+              [(ngModel)]="formData.isAvailable"
+              name="isAvailable"
+            />
+            <label class="form-check-label" for="isAvailable"
+              >Is Available</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

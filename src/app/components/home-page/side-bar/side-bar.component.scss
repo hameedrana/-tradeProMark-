@@ -1,0 +1,60 @@
+.main-sideBar {
+  &__sideBarContainer{
+    height: 100%;
+    background: white;
+    width: 112%;
+  }
+  &__sideBarLogo {
+    background: #ffffff;
+    padding: 20px 0px 20px 19px;
+    cursor: pointer;
+    span {
+      font-size: 20px;
+      font-weight: 800;
+      font-family: "Montserrat";
+      span {
+        font-size: 20px;
+        font-weight: 100;
+      }
+    }
+  }
+  &__menu {
+    background: white;
+    margin-bottom: 2rem;
+    ul{
+      padding-left: 0rem;
+    }
+  }
+  &__menuBar {
+    list-style-type: none !important;
+    
+    li {
+      padding: 10px;
+      cursor: pointer;
+    }
+    span {
+      color: #9f9f9f;
+      font-size: 17px;
+      font-weight: 400;
+      font-family: "Montserrat";
+    }
+    span:hover {
+      color: black;
+    }
+  }
+  &__upGradeBtn {
+    background: orangered;
+    color: #ffffff;
+    border: none;
+    padding: 9px 17px 9px 17px;
+    border-radius: 5px;
+    margin-left: 12%;
+  }
+}
+
+.active{
+    background: #398BF7;
+    span{
+      color: white;
+    }
+}
